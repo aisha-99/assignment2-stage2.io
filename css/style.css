@@ -1,0 +1,161 @@
+
+/*Default ---------------------------*/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 350px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+
+/*Nav Bar ---------------------------*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #272525;
+}
+
+li {
+    float: right;
+}
+  
+li a {
+    display: block;
+    color: #f5f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #3d3b3b;
+    color: #dadada;
+}
+
+
+/*Hero Section ---------------------------*/
+.hero {
+    background-image: url('../img/samuel-berner-kcvEQb7GXZc-unsplash.jpg');
+    background-position: 50%;
+    background-size: cover;
+    padding: 60px 60px 100px;
+    color: #f5f2f2;
+}
+
+.hero h1, .film-title h1 {
+    text-align: center;
+    font-size: 34px;
+}
+
+
+/* About --------------------------------*/
+.about, #movie {
+    background-color: #e8ecf0;
+    margin-top: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: block;
+}
+  
+.about-section, #movie-section {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: grid;
+}
+
+.about-section p {
+    padding-top: 40px;
+    margin-right: 70px;
+}
+
+.about-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+/*Films ----------------------------*/
+#movies {
+    background-color: #f5f2f2;
+    margin-top: 0;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+#movies img {
+    width: 250px;
+}
+
+.film-title {
+    text-align: center;
+    margin-top: 0;
+}
+  
+#all-movies {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    text-align: center;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    justify-items: stretch;
+    display: grid;
+}
+
+
+/*Films - Details ----------------------------*/
+.film-header {
+    color: #f5f2f2;
+    text-align: center;
+    background-image: url('../img/hoyoun-lee-NiJf9mB79Qo-unsplash.jpg');
+    background-position: 50%;
+    background-size: auto;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+  
+
+.film-gallery {
+    background-color: #2a2828;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.film-gallery h2 {
+    color: #f3ecec;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.trailer-section {
+    background-color: #e8ecf0;
+    padding: 10px 60px 60px;
+    text-align: center;
+  }
+
+/*Footer ---------------------------*/
+footer {
+    color: #f5f2f2;
+    background-color: #272525;
+    padding: 10px 10px 5px;
+    position: relative;
+    text-align: center;
+}
