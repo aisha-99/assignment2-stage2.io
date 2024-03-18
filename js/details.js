@@ -13,7 +13,6 @@ var client = contentful.createClient({
   var movie = document.getElementById('movie');
   var filmHeader = document.querySelector('.film-header');
   var gallerySection = document.querySelector('.film-gallery');
-  var trailer = document.querySelector('iframe')
 
   client.getEntry(id).then(function (entry) {
     console.log(entry);
@@ -59,10 +58,12 @@ var client = contentful.createClient({
 
         // Trailer Link
         console.log(entry.fields.trailerLink);
+        var trailerSpot = document.getElementById('trailer');
         var trailerLink = document.createElement('iframe');
+        
         trailerLink.src = entry.fields.trailerLink;
         console.log( entry.fields.trailerLink);
         // trailerLink.href = entry.fields.trailerLink;
-        movie.append(trailerLink);
+        trailerSpot.append(trailerLink);
         
     });

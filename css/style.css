@@ -59,12 +59,17 @@ li a:hover {
 
 
 /* About --------------------------------*/
-.about, #movie {
+.about, #movie, .about-page {
     background-color: #e8ecf0;
     margin-top: 0;
     padding-top: 40px;
     padding-bottom: 40px;
     display: block;
+}
+
+.about-page p {
+    padding-left: 60px;
+    margin-right: 60px;
 }
   
 .about-section, #movie-section {
