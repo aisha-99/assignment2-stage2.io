@@ -62,7 +62,7 @@ var client = contentful.createClient({
         var trailerLink = document.createElement('iframe');
         
         trailerLink.src = entry.fields.trailerLink;
-        console.log( entry.fields.trailerLink);
+        console.log(entry.fields.trailerLink);
         // trailerLink.href = entry.fields.trailerLink;
         trailerSpot.append(trailerLink);
         
