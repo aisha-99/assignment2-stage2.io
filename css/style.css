@@ -1,8 +1,13 @@
+:root {
+    --dark-color: rgb(18, 31, 37);
+    --light-color: rgb(224, 226, 229);
+}
 
 /*Default ---------------------------*/
 html, body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 img {
@@ -18,28 +23,48 @@ h2 {
 
 
 /*Nav Bar ---------------------------*/
-ul {
-    list-style-type: none;
+body {
     margin: 0;
-    overflow: hidden;
-    background-color: #272525;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-li {
-    float: right;
+nav {
+    background-color: var(--dark-color);
+    padding: 10px;
+    display: flex;
+    justify-content: end;
 }
-  
-li a {
-    display: block;
-    color: #f5f2f2;
-    text-align: center;
-    padding: 14px 16px;
+
+nav a {
     text-decoration: none;
+    color: var(--light-color);
 }
-  
-li a:hover {
-    background-color: #3d3b3b;
-    color: #dadada;
+
+nav ul li a {
+    padding-right: 15px;
+}
+
+nav a:hover {
+    color: #8f8f8f;
+}
+
+
+#menu {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+#menu-toggle {
+    display: none;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+}
+
+#menu.active {
+    display: flex;
 }
 
 
@@ -49,7 +74,7 @@ li a:hover {
     background-position: 50%;
     background-size: cover;
     padding: 60px 60px 100px;
-    color: #f5f2f2;
+    color: var(--light-color);
 }
 
 .hero h1, .film-title h1 {
@@ -92,7 +117,7 @@ li a:hover {
 
 /*Films ----------------------------*/
 #movies {
-    background-color: #f5f2f2;
+    background-color: var(--light-color);
     margin-top: 0;
     padding-top: 40px;
     padding-bottom: 60px;
@@ -120,7 +145,7 @@ li a:hover {
 
 /*Films - Details ----------------------------*/
 .film-header {
-    color: #f5f2f2;
+    color: var(--light-color);
     text-align: center;
     background-image: url('../img/hoyoun-lee-NiJf9mB79Qo-unsplash.jpg');
     background-position: 50%;
@@ -147,13 +172,13 @@ li a:hover {
   }
   
 .film-gallery {
-    background-color: #2a2828;
+    background-color: var(--dark-color);;
     padding-top: 20px;
     padding-bottom: 60px;
 }
 
 .film-gallery h2 {
-    color: #f3ecec;
+    color: var(--light-color);
     text-align: center;
     padding-bottom: 20px;
 }
@@ -166,7 +191,7 @@ li a:hover {
   }
 
 .trailer-section {
-    background-color: #e8ecf0;
+    background-color: var(--light-color);
     padding: 10px 60px 60px;
     text-align: center;
   }
@@ -195,8 +220,8 @@ li a:hover {
 
 /*Footer ---------------------------*/
 footer {
-    color: #f5f2f2;
-    background-color: #272525;
+    color: var(--light-color);
+    background-color: var(--dark-color);
     padding: 10px 10px 5px;
     position: relative;
     text-align: center;
@@ -235,7 +260,21 @@ footer {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 480px) {
+    #menu-toggle {
+        display: block;
+    }
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: var(--dark-color);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
     .about-section img {
         width: 175px;
     }
