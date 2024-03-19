@@ -134,7 +134,28 @@ li a:hover {
     padding-top: 40px;
     padding-bottom: 60px;
 }
+
+.movie-section {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 60px;
+    align-items: center;
+  }
   
+  .image-column {
+    flex: 0 0 auto; 
+  }
+  
+  .text-column {
+    flex: 1; 
+    margin-left: 20px; 
+  }
+  
+
+
+
+
 
 .film-gallery {
     background-color: #2a2828;
@@ -161,7 +182,10 @@ li a:hover {
     text-align: center;
   }
 
-
+#trailer iframe {
+    width: 560px;
+    height: 315px;
+}
 
 /*Footer ---------------------------*/
 footer {

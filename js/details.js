@@ -10,7 +10,9 @@ var client = contentful.createClient({
     accessToken: 'SjUQZDO7xSYc2IeDzAWqx5j0WuwEjMLPCPvt6QCeils',
   });
 
-  var movie = document.getElementById('movie');
+  var movieSection = document.querySelector('#movie .movie-section');
+  var mainImageColumn = movieSection.querySelector('.main-image-column');
+  var filmTextColumn = movieSection.querySelector('.film-text-column');
   var filmHeader = document.querySelector('.film-header');
   var gallerySection = document.querySelector('.film-gallery');
 
@@ -23,28 +25,27 @@ var client = contentful.createClient({
     filmTitle.classList.add('film-title');
     filmHeader.appendChild(filmTitle);
 
-        // Main Image
-        console.log(entry.fields.mainImage.fields.file.url);
-        var mainImage = document.createElement('img');
-        mainImage.classList.add('main-image');
-        if (entry.fields.mainImage){
-            mainImage.src = entry.fields.mainImage.fields.file.url;
-            movie.append(mainImage);
-        }
+    // Main Image
+    console.log(entry.fields.mainImage.fields.file.url);
+    var mainImage = document.createElement('img');
+    mainImage.classList.add('main-image');
+    if (entry.fields.mainImage){
+        mainImage.src = entry.fields.mainImage.fields.file.url;
+        mainImageColumn.appendChild(mainImage);
+    }
 
-        // Synopsis/Description
-        console.log(entry.fields.description);
-        var description = document.createElement('p');
-        description.innerHTML = entry.fields.description;
-        description.classList.add('description');
-        movie.append(description);
-        console.log(entry);
+    // Synopsis/Description
+    console.log(entry.fields.description);
+    var description = document.createElement('p');
+    description.innerHTML = entry.fields.description;
+    description.classList.add('description');
+    filmTextColumn.querySelector('.film-text').appendChild(description);
 
-        // Film Director
-        console.log(entry.fields.filmDirector);
-        var filmDirector = document.createElement('h4');
-        filmDirector.innerHTML = entry.fields.filmDirector;
-        movie.append(filmDirector);
+    // Film Director
+    console.log(entry.fields.filmDirector);
+    var filmDirector = document.createElement('h3');
+    filmDirector.innerHTML = entry.fields.filmDirector;
+    filmTextColumn.querySelector('.film-text').appendChild(filmDirector);
 
 
         // Gallery Images
