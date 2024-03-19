@@ -241,6 +241,23 @@ footer {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 0;
     }
+
+    .movie-section {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .image-column, .text-column {
+        flex: 1;
+        margin: 0;
+    }
+
+    .gallery-images {
+        grid-template-columns: 1fr;
+        align-content: middle;
+      }
 }
   
   
@@ -258,6 +275,12 @@ footer {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+
+    #trailer iframe {
+        width: 300px;
+        height: 155px;
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
